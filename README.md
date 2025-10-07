@@ -68,6 +68,21 @@ Example response:
 }
 ```
 
+**POST /api/research**
+
+Example request:
+```json
+{ "query": "Quantum physics" }
+```
+
+Example response:
+```text stream
+"data": {"text":"Quantum physics describes the fundamental behavior of nature at its smallest, subatomic scales, where traditional classical physics is no longer sufficient. While many experiments focus on tiny objects like electrons and photons,"},
+"data": {"text":"Quantum physics describes the fundamental behavior of nature at its smallest, subatomic scales, where traditional classical physics is no longer sufficient. While many experiments focus on tiny objects like electrons and photons,"},
+"data": {"text":"Quantum physics describes the fundamental behavior of nature at its smallest, subatomic scales, where traditional classical physics is no longer sufficient. While many experiments focus on tiny objects like electrons and photons,"}
+data: {"done":true}
+```
+
 ---
 
 ## 💻 Frontend
@@ -86,6 +101,7 @@ src/
 │   ├── researchRoutes.ts
 ├── controllers/
 │   ├── researchController.ts
+│   ├── streamResearchController.ts
 ├── services/
 │   ├── braveService.ts
 │   ├── geminiService.ts

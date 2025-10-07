@@ -13,7 +13,6 @@ app.use(express.static(path.join(__dirname, "../src/views")));
 
 app.use("/api", researchRoutes);
 
-// Serve UI
 app.get("/", (_req, res) => {
   res.sendFile(path.join(__dirname, "../src/views", "index.html"));
 });
